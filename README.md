@@ -1,5 +1,8 @@
 ## hello_world
-
+Nama : Reza Prasasti
+NIM  : 230444040006
+PD   : Manajemen Informatika (04421)
+Ini adalah tugas aplikasi pertama dan widget dasar flutter.
 
 A new flutter project.
 ![Screenshoot Hello_World](images/Reza01.png)
