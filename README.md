@@ -6,3 +6,6 @@ A new flutter project.
 
 Laporan 1 : Text Widgets.
 ![Screenshoot Hello_World](images/Reza02.png)
+
+Laporan 2 : Text Widgets.
+![Screenshoot Hello_World](images/Reza03.png)
