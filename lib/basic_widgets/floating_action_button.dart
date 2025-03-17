@@ -15,12 +15,19 @@ class FloatingActionButtonExample extends StatelessWidget {
             style: TextStyle(fontSize: 18),
           ),
         ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            // Tambahkan aksi yang diinginkan di sini
-          },
-          child: const Icon(Icons.thumb_up),
-          backgroundColor: Colors.pink,
+        floatingActionButton: Builder(
+          builder: (context) => FloatingActionButton(
+            onPressed: () {
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(
+                  content: Text("Tombol ditekan!"),
+                  duration: Duration(seconds: 2),
+                ),
+              );
+            },
+            child: const Icon(Icons.thumb_up),
+            backgroundColor: Colors.pink,
+          ),
         ),
       ),
     );
