@@ -37,25 +37,75 @@ class HomeScreen extends StatelessWidget {
           shrinkWrap: true,
           padding: const EdgeInsets.all(16),
           children: [
-            _buildNavigationButton(context, "Scaffold Widget", const ScaffoldWidget()),
-            _buildNavigationButton(context, "Dialog Widget", const DialogWidget()),
-            _buildNavigationButton(context, "Input & Selection Widget", const InputSelectionWidget()),
-            _buildNavigationButton(context, "Date Picker Widget", const DateTimePickerWidget()),
-            _buildNavigationButton(context, "Floating Action Button", FloatingActionButtonExample()),
-            _buildNavigationButton(context, "Image Widget", const MyImageWidget()),
-            _buildNavigationButton(context, "Loading Cupertino", const LoadingCupertino()),
-            _buildNavigationButton(context, "Text Widget", const MyTextWidget()),
+            _buildNavigationButton(
+              context, 
+              "Scaffold Widget", 
+              const ScaffoldWidget(),
+              icon: Icons.dashboard,
+            ),
+            _buildNavigationButton(
+              context, 
+              "Dialog Widget", 
+              const DialogWidget(),
+              icon: Icons.chat_bubble_outline,
+            ),
+            _buildNavigationButton(
+              context, 
+              "Input & Selection Widget", 
+              const InputSelectionWidget(),
+              icon: Icons.edit_note,
+            ),
+            _buildNavigationButton(
+              context, 
+              "Date Picker Widget", 
+              const DateTimePickerWidget(),
+              icon: Icons.calendar_today,
+            ),
+            _buildNavigationButton(
+              context, 
+              "Floating Action Button", 
+              FloatingActionButtonExample(),
+              icon: Icons.thumb_up,
+            ),
+            _buildNavigationButton(
+              context, 
+              "Image Widget", 
+              const MyImageWidget(),
+              icon: Icons.image,
+            ),
+            _buildNavigationButton(
+              context, 
+              "Loading Cupertino", 
+              const LoadingCupertino(),
+              icon: Icons.hourglass_top,
+            ),
+            _buildNavigationButton(
+              context, 
+              "Text Widget", 
+              const MyTextWidget(),
+              icon: Icons.text_fields,
+            ),
           ],
         ),
       ),
     );
   }
 
-  Widget _buildNavigationButton(BuildContext context, String title, Widget destination) {
+  Widget _buildNavigationButton(
+    BuildContext context,
+    String title,
+    Widget destination, {
+    required IconData icon,
+  }) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8),
-      child: ElevatedButton(
-        child: Text(title),
+      child: ElevatedButton.icon(
+        icon: Icon(icon),
+        label: Text(title),
+        style: ElevatedButton.styleFrom(
+          padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
+          textStyle: const TextStyle(fontSize: 16),
+        ),
         onPressed: () {
           Navigator.push(
             context,
