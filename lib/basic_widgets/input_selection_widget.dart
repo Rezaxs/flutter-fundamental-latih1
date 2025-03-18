@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class InputSelectionWidget extends StatelessWidget {
-  const InputSelectionWidget({Key? key}) : super(key: key);
+  const InputSelectionWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

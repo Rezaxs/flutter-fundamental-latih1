@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class FloatingActionButtonExample extends StatelessWidget {
+  const FloatingActionButtonExample({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -25,8 +27,8 @@ class FloatingActionButtonExample extends StatelessWidget {
                 ),
               );
             },
-            child: const Icon(Icons.thumb_up),
             backgroundColor: Colors.pink,
+            child: const Icon(Icons.thumb_up),
           ),
         ),
       ),
